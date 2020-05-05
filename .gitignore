@@ -1,0 +1,13 @@
+# Maven
+**/log/
+**/target/
+*.versionBackup
+
+# Log file
+*.log
+
+# NPM
+**/node/
+**/node_modules/
+**/built
+**/dist
