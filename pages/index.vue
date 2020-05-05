@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">website</h1>
+      <h1 class="title">Nuxt</h1>
       <h2 class="subtitle">Olivier&#39;s website</h2>
     </div>
   </div>

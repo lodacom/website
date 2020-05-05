@@ -1,5 +1,5 @@
 module.exports = {
-  mode: 'spa',
+  mode: 'universal',
   /*
    ** Headers of the page
    */
@@ -59,5 +59,11 @@ module.exports = {
         ]
       }
     }
+  },
+  /**
+   * Generate configuration
+   */
+  generate: {
+    devtools: false
   }
 }
