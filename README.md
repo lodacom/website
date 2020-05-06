@@ -1,5 +1,7 @@
 # website
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=lodacom_website&metric=alert_status)](https://sonarcloud.io/dashboard?id=lodacom_website)
+
 > Olivier&#39;s website
 
 ## Build Setup
