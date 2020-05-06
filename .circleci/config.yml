@@ -7,9 +7,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install git client
-          command: apk update && apk add git
-      - run:
           name: update-npm
           command: 'sudo npm install -g npm@latest'
       - restore_cache: # special step to restore the dependency cache
