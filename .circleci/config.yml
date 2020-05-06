@@ -28,7 +28,7 @@ jobs:
             wget https://cli.run.pivotal.io/stable?release=linux64-binary
             mv stable?release=linux64-binary /tmp/cf-cli.tgz
             mkdir -p /usr/local/bin
-            tar -xzf /tmp/cf-cli.tgz -C /usr/local/bin
+            sudo tar -xzf /tmp/cf-cli.tgz -C /usr/local/bin
             cf --version
             rm -f /tmp/cf-cli.tgz
       - run:
