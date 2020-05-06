@@ -35,9 +35,20 @@ jobs:
           name: Deploy
           command: |
             cf login -a "$CF_API" -u "$CF_USERNAME" -p "$CF_PASSWORD" -o "$CF_ORG" -s "$CF_SPACE_PROD"
-            cf push 
+            cf push
+  scan:
+     docker:
+       - image: sonarsource/sonarcloud-scan:1.0.1
+     steps:
+     - checkout
+     - run:
+         name: Quality Scan
+         command: sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.login="$SONAR_LOGIN"
 workflows:
   version: 2.1
   build_deploy_tests_and_scan:
     jobs:
-      - build
+      - scan
+      - build:
+          requires:
+            - build
