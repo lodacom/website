@@ -34,6 +34,7 @@ jobs:
       - run:
           name: Deploy
           command: |
+            ls -a
             cf login -a "$CF_API" -u "$CF_USERNAME" -p "$CF_PASSWORD" -o "$CF_ORG" -s "$CF_SPACE_PROD"
             cf push 
 workflows:
