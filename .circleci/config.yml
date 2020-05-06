@@ -51,4 +51,4 @@ workflows:
       - scan
       - build:
           requires:
-            - build
+            - scan
