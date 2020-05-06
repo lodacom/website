@@ -7,6 +7,6 @@ applications:
     buildpacks:
       - staticfile_buildpack
     routes:
-      - route: olivier.duplouy.cfapps.io
+      - route: olivier-duplouy.cfapps.io
     env:
       FORCE_HTTPS: true
