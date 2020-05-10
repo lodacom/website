@@ -27,7 +27,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~filters/formatDate.filter'],
   /*
    ** Nuxt.js dev-modules
    */

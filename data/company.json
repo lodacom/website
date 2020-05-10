@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Bull",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/b/bc/BullAtosTechnologies.png",
+        "city": "Montpellier",
+        "country": "France"
+    },
+    {
+        "id": 2,
+        "name": "Mairie de Montpellier",
+        "logo": null,
+        "city": "Montpellier",
+        "country": "France"
+    },
+    {
+        "id": 3,
+        "name": "Direction Générale des Finances Publiques",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/6d/Logo_DGFP-fr.svg/1200px-Logo_DGFP-fr.svg.png",
+        "city": "Montpellier",
+        "country": "France"
+    },
+    {
+        "id": 4,
+        "name": "CGI",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/CGI_logo.svg/1200px-CGI_logo.svg.png",
+        "city": "Castelnau-le-Lez",
+        "country": "France"
+    },
+    {
+        "id": 5,
+        "name": "ATOS",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/7/79/Atos_logo.svg/1200px-Atos_logo.svg.png",
+        "city": "Castelnau-le-Lez",
+        "country": "France"
+    }
+]
