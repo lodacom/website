@@ -34,7 +34,6 @@ export default class ExperienceService {
 
     public orderByDate(list: Array<Experience>): Experience[] {
         return list.sort(function (a: Experience, b: Experience) {
-            console.log(a._fromDate > b._fromDate)
             if (a._fromDate > b._fromDate) {
                 return -1
             } else {
