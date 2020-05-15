@@ -3,38 +3,44 @@
         <b-col cols="3">
             <div>
                 <strong>Nom</strong>
-                : {{people.lastname}}
+                : {{ people.lastname }}
             </div>
             <div>
                 <strong>Prénom</strong>
-                : {{people.firstname}}
+                : {{ people.firstname }}
             </div>
             <div>
                 <strong>Ville</strong>
-                : {{people.city}}
+                : {{ people.city }}
             </div>
             <div>
                 <strong>Pays</strong>
-                : {{people.country}}
+                : {{ people.country }}
             </div>
         </b-col>
         <b-col cols="9">
-            <b-row v-for="company in companies" :key="company.id">
+            <b-row v-for="experience in experiences" :key="experience.id">
                 <b-col cols="3">
                     <div>
                         <img
-                            v-if="company.logo !== null"
-                            v-bind:src="company.logo"
-                            v-bind:alt="'Logo-'+company.name"
+                            v-if="experience.company.logo !== null"
+                            :src="experience.company.logo"
+                            :alt="'Logo-' + experience.company.name"
                             height="48"
                             width="48"
                         />
                     </div>
-                    <div>{{company.name}}</div>
+                    <div>{{ experience.company.name }}</div>
                 </b-col>
                 <b-col cols="9">
-                    <b-row v-for="experience in company.experiences" :key="experience.id">
-                        <b-col>{{experience.fromDate | formatDate('MMM YYYY') }} - {{experience.toDate | formatDate('MMM YYYY')}}</b-col>
+                    <b-row>
+                        <b-col>
+                            {{ experience.fromDate | formatDate('MMM YYYY') }} -
+                            <span
+                                v-if="experience.toDate != null"
+                            >{{ experience.toDate | formatDate('MMM YYYY') }}</span>
+                            <span v-else>Aujourd'hui</span>
+                        </b-col>
                     </b-row>
                 </b-col>
             </b-row>
@@ -45,15 +51,17 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import People from './model/people'
-import CompanyService from './service/company-service'
+import ExperienceService from './service/experience-service'
 
 @Component
 export default class Nuxt extends Vue {
     asyncData(context: any) {
-        const companyService: CompanyService = new CompanyService()
+        const expService: ExperienceService = new ExperienceService()
+        expService.fetchExperiences()
+        expService.orderByDate(expService.experiences)
         return {
             people: new People(),
-            companies: companyService.retreiveCompanies()
+            experiences: expService.experiences
         }
     }
 }

@@ -1,12 +1,9 @@
-import Experience from './experience'
-
 export default class Company {
     private id!: number
     private name!: string
     private logo!: string | null
     private city!: string
     private country!: string
-    private experiences: Array<Experience> = []
 
     constructor(
         id: number,
@@ -40,9 +37,5 @@ export default class Company {
 
     public get _country(): string {
         return this.country
-    }
-
-    public get _experiences(): Array<Experience> {
-        return this.experiences
     }
 }

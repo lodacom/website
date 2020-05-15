@@ -5,18 +5,41 @@ import experienceData from '~/data/experience.json'
 export default class ExperienceService {
     private _experiences: Array<Experience> = []
 
-    public constructor() {
+    public fetchExperiences(): void {
         experienceData.forEach((exp) => {
             const fromDate = moment(exp.fromDate, 'DD/MM/YYYY')
-            const toDate = moment(exp.toDate, 'DD/MM/YYYY')
-            this._experiences.push(
-                new Experience(
+            let toDate = null
+            let experience = null
+            if (exp.toDate !== null) {
+                toDate = moment(exp.toDate, 'DD/MM/YYYY')
+                experience = new Experience(
                     exp.id,
                     fromDate.toDate(),
                     toDate.toDate(),
                     exp.companyId
                 )
-            )
+            } else {
+                experience = new Experience(
+                    exp.id,
+                    fromDate.toDate(),
+                    null,
+                    exp.companyId
+                )
+            }
+
+            experience.company = experience.fetchCompany()
+            this._experiences.push(experience)
+        })
+    }
+
+    public orderByDate(list: Array<Experience>): Experience[] {
+        return list.sort(function (a: Experience, b: Experience) {
+            console.log(a._fromDate > b._fromDate)
+            if (a._fromDate > b._fromDate) {
+                return -1
+            } else {
+                return 1
+            }
         })
     }
 

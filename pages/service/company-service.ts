@@ -5,7 +5,7 @@ import companyData from '~/data/company.json'
 export default class CompanyService {
     private companies: Array<Company> = []
     private companyIndex!: number
-    private experienceService: ExperienceService = new ExperienceService()
+    private experienceService!: ExperienceService
 
     public constructor() {
         companyData.forEach((company) => {
@@ -35,6 +35,7 @@ export default class CompanyService {
     }
 
     private joinExperiences(): void {
+        this.experienceService = new ExperienceService()
         this.experienceService.experiences.forEach((exp) => {
             const company = this.fetchId(exp._companyId)
             company._experiences.push(exp)
