@@ -33,7 +33,7 @@ export default class Experience {
         return this.fromDate
     }
 
-    public get _toDate(): Date {
+    public get _toDate(): Date | null {
         return this.toDate
     }
 
