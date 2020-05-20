@@ -1,6 +1,8 @@
-import moment, { Duration } from 'moment'
+import moment from 'moment'
 import CompanyService from '../service/company-service'
 import Company from './company'
+import Project from './project'
+import ProjectService from '../service/project-service'
 
 export default class Experience {
     private id!: number
@@ -9,6 +11,7 @@ export default class Experience {
     private title!: string
     private companyId!: number
     public company!: Company
+    public projects!: Array<Project>
 
     constructor(
         id: number,
@@ -24,36 +27,38 @@ export default class Experience {
         this.companyId = companyId
     }
 
-    public fetchCompany(): Company {
+    public fetchCompany(): void {
         const company: CompanyService = new CompanyService()
-        return company.fetchId(this.companyId)
+        this.company = company.fetchId(this.companyId)
+    }
+
+    public fetchProjects(): void {
+        const project: ProjectService = new ProjectService()
+        this.projects = project.fetchProjects(this.id)
     }
 
     public get durationExperience(): string {
         if (this.toDate == null) {
             const from = moment(this._fromDate)
             const now = moment()
-            const duration: Duration = moment.duration(now.diff(from))
+            const duration = moment.duration(now.diff(from))
 
             return this.calculateDuration(duration)
         } else {
             const from = moment(this._fromDate)
             const to = moment(this._toDate)
-            const duration: Duration = moment.duration(to.diff(from))
+            const duration = moment.duration(to.diff(from))
 
             return this.calculateDuration(duration)
         }
     }
 
-    private calculateDuration(duration: Duration): string {
+    private calculateDuration(duration: any): string {
         if (duration.years() < 1) {
             return duration.months() + 1 + ' mois'
         } else {
             return (
-                duration.years() +
-                ' ans ' +
-                (duration.months() + 1) +
-                ' mois'
+                duration.years() + ' ans ' + (duration.months() + 1) + ' mois'
             )
         }
     }

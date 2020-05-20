@@ -29,7 +29,8 @@ export default class ExperienceService {
                 )
             }
 
-            experience.company = experience.fetchCompany()
+            experience.fetchCompany()
+            experience.fetchProjects()
             this._experiences.push(experience)
         })
     }

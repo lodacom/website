@@ -52,3 +52,9 @@ workflows:
       - build:
           requires:
             - scan
+          filters:
+            branches:
+              only: 
+                - master
+                - develop
+                - feature/csv-data

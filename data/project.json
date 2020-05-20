@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "",
+        "company": "",
+        "description": "- Prototypage du CMS Alfresco<br/> - Mise en place d’un workflow<br/><br/>Environnement Technique : CMS Alfresco",
+        "experienceId": 1
+    },
+    {
+        "id": 2,
+        "name": "",
+        "company": "",
+        "description": "- Intégration des données téléphoniques<br/>- Mise en place d’un site intranet pour la gestion du budget de la Caisse des écoles primaires<br/>- Conception et mise en place d’une base de données<br/>Environnement Technique : serveur SQLServer, VBScript, squelette d’un site intranet",
+        "experienceId": 2
+    },
+    {
+        "id": 3,
+        "name": "Pénélope",
+        "company": "DRFiP",
+        "description": "- Mise en place et administration d’un serveur Linux<br/>- Mise en place, conception et administration d’une base de données<br/>- Etablissement de cahiers des charges avec les différents services demandeurs<br/>- Conception et implémentation des modules demandés<br/>- Ecriture de différents manuels utilisateurs<br/>- Formation d’agents au framework Symfony 2<br/>- Présentation en conférence des produits développés<br/><br/>Environnement Technique : serveur LAMP, base de données MySQL, technologies web habituelles (HTML, CSS, JQuery, JQueryUI), Symfony 2, Google Charts, HTML2PDF",
+        "experienceId": 3
+    }
+]

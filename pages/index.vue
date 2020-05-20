@@ -1,20 +1,6 @@
 <template>
     <section class="profile">
-        <section class="top-card-layout">
-            <div class="top-card-layout__entity-info-container">
-                <div class="top-card-layout__entity-info">
-                    <h1 class="top-card-layout__title">{{ people.firstname }} {{ people.lastname }}</h1>
-                    <h2
-                        class="top-card-layout__headline"
-                    >{{experiences[0].title}} chez {{experiences[0].company.name}}</h2>
-                    <h3 class="top-card-layout__first-subline">
-                        <span
-                            class="top-card__subline-item"
-                        >Région de {{ people.city }}, {{ people.country }}</span>
-                    </h3>
-                </div>
-            </div>
-        </section>
+        <card :people="people" :experience="experiences[0]" />
         <section class="experience pp-section">
             <header class="experience__header pp-section__header">
                 <h2 class="experience__heading pp-section__heading">Expérience</h2>
@@ -25,14 +11,7 @@
                     :key="experience.id"
                     class="result-card experience-item"
                 >
-                    <a class="result-card__image-link">
-                        <img
-                            v-if="experience.company.logo !== null"
-                            :src="experience.company.logo"
-                            :alt="'Logo-' + experience.company.name"
-                            class="artdeco-entity-image experience-item artdeco-entity-image--company experience-item--company artdeco-entity-image--square-4 experience-item--square-4 result-card__image lazy-loaded"
-                        />
-                    </a>
+                    <company :company="experience.company" />
                     <div class="result-card__contents experience-item__contents">
                         <h3 class="result-card__title experience-item__title">{{ experience.title }}</h3>
                         <h4 class="result-card__subtitle experience-item__subtitle">
@@ -61,11 +40,11 @@
                             <p
                                 class="experience-item__location experience-item__meta-item"
                             >Région de {{ experience.company.city }}, {{ experience.company.country }}</p>
-                            <div class="experience-item__description experience-item__meta-item">
-                                <div class="show-more-less-text show-more-less-description">
-                                    <p class="show-more-less-text__text--less"></p>
-                                </div>
-                            </div>
+                            <project
+                                v-for="project in experience.projects"
+                                :key="project.id"
+                                :project="project"
+                            />
                         </div>
                     </div>
                 </li>
@@ -76,10 +55,19 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import Card from '../components/Card.vue'
+import Company from '../components/Company.vue'
+import Project from '../components/Project.vue'
 import People from './model/people'
 import ExperienceService from './service/experience-service'
 
-@Component
+@Component({
+    components: {
+        Card,
+        Company,
+        Project
+    }
+})
 export default class Nuxt extends Vue {
     asyncData(context: any) {
         const expService: ExperienceService = new ExperienceService()
