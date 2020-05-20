@@ -16,6 +16,7 @@ export default class ExperienceService {
                     exp.id,
                     fromDate.toDate(),
                     toDate.toDate(),
+                    exp.title,
                     exp.companyId
                 )
             } else {
@@ -23,6 +24,7 @@ export default class ExperienceService {
                     exp.id,
                     fromDate.toDate(),
                     null,
+                    exp.title,
                     exp.companyId
                 )
             }

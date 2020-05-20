@@ -3,30 +3,35 @@
         "id": 1,
         "fromDate": "01/02/2011",
         "toDate": "01/05/2011",
+        "title": "Stagiaire",
         "companyId": 1
     },
     {
         "id": 2,
         "fromDate": "01/07/2012",
         "toDate": "01/08/2012",
+        "title": "Stagiaire bénévole",
         "companyId": 2
     },
     {
         "id": 3,
         "fromDate": "01/03/2014",
         "toDate": "01/08/2014",
+        "title": "Stagiaire",
         "companyId": 3
     },
     {
         "id": 4,
         "fromDate": "01/10/2014",
         "toDate": "01/06/2019",
+        "title": "Ingénieur en technologie de l'information",
         "companyId": 4
     },
     {
         "id": 5,
         "fromDate": "01/06/2019",
         "toDate": null,
+        "title": "Ingénieur en technologie de l'information",
         "companyId": 5
     }
 ]

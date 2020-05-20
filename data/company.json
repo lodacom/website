@@ -9,7 +9,7 @@
     {
         "id": 2,
         "name": "Mairie de Montpellier",
-        "logo": null,
+        "logo": "https://www.montpellier.fr/uploads/Image/78/SIT_MPL_354_Logo_ville_site-sansmontpellier.jpg",
         "city": "Montpellier",
         "country": "France"
     },
