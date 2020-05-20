@@ -4,6 +4,7 @@
         "name": "",
         "company": "",
         "description": "- Prototypage du CMS Alfresco<br/> - Mise en place d’un workflow<br/><br/>Environnement Technique : CMS Alfresco",
+        "order": 1,
         "experienceId": 1
     },
     {
@@ -11,6 +12,7 @@
         "name": "",
         "company": "",
         "description": "- Intégration des données téléphoniques<br/>- Mise en place d’un site intranet pour la gestion du budget de la Caisse des écoles primaires<br/>- Conception et mise en place d’une base de données<br/>Environnement Technique : serveur SQLServer, VBScript, squelette d’un site intranet",
+        "order": 1,
         "experienceId": 2
     },
     {
@@ -18,6 +20,87 @@
         "name": "Pénélope",
         "company": "DRFiP",
         "description": "- Mise en place et administration d’un serveur Linux<br/>- Mise en place, conception et administration d’une base de données<br/>- Etablissement de cahiers des charges avec les différents services demandeurs<br/>- Conception et implémentation des modules demandés<br/>- Ecriture de différents manuels utilisateurs<br/>- Formation d’agents au framework Symfony 2<br/>- Présentation en conférence des produits développés<br/><br/>Environnement Technique : serveur LAMP, base de données MySQL, technologies web habituelles (HTML, CSS, JQuery, JQueryUI), Symfony 2, Google Charts, HTML2PDF",
+        "order": 1,
         "experienceId": 3
+    },
+    {
+        "id": 4,
+        "name": "Mappy Schopping",
+        "company": "Mappy",
+        "description": "Eclipse, HTML5, CSS, JQUERY, PHP, web services, MySQL, Symfony 2",
+        "experienceId": 4,
+        "order": 1
+    },
+    {
+        "id": 5,
+        "name": "GoMarketing",
+        "company": "Michelin",
+        "description": "Eclipse, HTML5, CSS, PHP, MySQL, Symfony 2, tests Seleniums et utilisation de Squash.",
+        "experienceId": 4,
+        "order": 2
+    },
+    {
+        "id": 6,
+        "name": "Gestion de concertation",
+        "company": "SNCF Réseau",
+        "description": "NetBeans, HTML5, CSS/Bootstrap, PHP, MySQL, Symfony 2 (mise en place du socle technique Symfony), AngularJs",
+        "experienceId": 4,
+        "order": 3
+    },
+    {
+        "id": 7,
+        "name": "Perval",
+        "company": "ADSN",
+        "description": "NetBeans, HTML5, CSS, PHP, MySQL, Drupal, Spring (micro-services), AngularJs (expert pour cette technologie pour ce projet).",
+        "experienceId": 4,
+        "order": 4
+    },
+    {
+        "id": 8,
+        "name": "Mapi Research Trust",
+        "company": "Mapi",
+        "description": "NetBeans, HTML5, CSS, PHP, MySQL, eZPublish 5, JQuery",
+        "experienceId": 4,
+        "order": 5
+    },
+    {
+        "id": 9,
+        "name": "EDF Particuliers",
+        "company": "EDF",
+        "description": "gestion en cycle en V sur des versions majeures<br/>Eclipse, HTML5, CSS, Java, Postgres, AEM, JBoss, JQuery, Angular",
+        "experienceId": 4,
+        "order": 6
+    },
+    {
+        "id": 10,
+        "name": "EDF Particuliers",
+        "company": "EDF",
+        "description": "gestion en AGILE/SCRUM s'intégrant sur les versions majeures (pendant 1 an et 8 mois)<br/>Participation aux ateliers avec rédaction de solutions techniques (POC+R&D si besoin)<br/>Démonstrations chez le client<br/>Un projet d'automatisation de tests m'a été confié personnelement (R&D, kit de dev, capitalisations, réunion à mener)<br/>Développement sous AEM, JAVA (FO + BO), Angular JS/JQuery, PureCSS, Sightly, Selenium, Jenkins, Maven, Cucumber, GitLab, gestion en GIT Flow",
+        "experienceId": 4,
+        "order": 7
+    },
+    {
+        "id": 10,
+        "name": "Smoovengo",
+        "company": "Smoovengo",
+        "description": "Participation au développement de l'application Android Smoovengo pour les Vélib' de Paris. Développement sous Android Studio (Java).",
+        "experienceId": 4,
+        "order": 8
+    },
+    {
+        "id": 11,
+        "name": "EDF Marché d'affaire",
+        "company": "EDF",
+        "description": "En tant qu’expert AEM et lead technique, j’ai participé au projet EDF Marché d’Affaires pour EDF.<br/>Ma mission, m’a donné l’occasion de mettre en place des optimisations importantes et impactantes pour le site. J’ai également mené des études pour optimiser le déploiement sur serveur d’une instance AEM. Une amélioration qui a permis de diviser par 3 le temps initial.<br/>Tout au long de ma mission, j’ai du travailler en étroite collaboration et effectuer du support technique auprès de différentes équipes.<br/>Environnement Technique : Développement sous AEM, JAVA, Ansible pour le déploiement automatisé sur serveur. Accès en VPN + SSH sur serveur Linux.",
+        "experienceId": 4,
+        "order": 9
+    },
+    {
+        "id": 12,
+        "name": "Darty Redbox",
+        "company": "FNAC/DARTY",
+        "description": "En tant que lead technique j'ai piloté à distance et sur site 3 developpeurs juniors<br/>Eclipse, Spring, HTML5, CSS, Java, MySQL, JBoss, JQuery",
+        "experienceId": 4,
+        "order": 10
     }
 ]

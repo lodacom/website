@@ -4,19 +4,22 @@ export default class Project {
     private company!: string
     private description!: string
     private experienceId!: number
+    private order!: number
 
     constructor(
         id: number,
         name: string,
         company: string,
         description: string,
-        experienceId: number
+        experienceId: number,
+        order: number
     ) {
         this.id = id
         this.name = name
         this.company = company
         this.description = description
         this.experienceId = experienceId
+        this.order = order
     }
 
     public get _id(): number {
@@ -37,5 +40,9 @@ export default class Project {
 
     public get _experienceId(): number {
         return this.experienceId
+    }
+
+    public get _order(): number {
+        return this.order
     }
 }
