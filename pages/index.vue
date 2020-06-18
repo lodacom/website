@@ -58,8 +58,8 @@ import { Component, Vue } from 'nuxt-property-decorator'
 import Card from '../components/Card.vue'
 import Company from '../components/Company.vue'
 import Project from '../components/Project.vue'
-import People from './model/people'
-import ExperienceService from './service/experience-service'
+import People from '../components/model/people'
+import ExperienceService from '../components/service/experience-service'
 
 @Component({
     components: {

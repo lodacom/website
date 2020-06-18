@@ -10,7 +10,7 @@
 </template>
 <script lang="ts">
 import { Component, Vue, Prop } from 'nuxt-property-decorator'
-import Company from '../pages/model/company'
+import Company from './model/company'
 
 @Component
 export default class CompanyComponent extends Vue {

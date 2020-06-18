@@ -22,7 +22,7 @@
 </template>
 <script lang="ts">
 import { Component, Vue, Prop } from 'nuxt-property-decorator'
-import Project from '../pages/model/project'
+import Project from './model/project'
 
 @Component
 export default class ProjectComponent extends Vue {

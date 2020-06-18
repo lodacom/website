@@ -1,13 +1,14 @@
 <template>
     <b-container>
         <b-navbar toggleable="lg" type="dark" variant="info">
-            <b-navbar-brand href="#">Olivier Duplouy</b-navbar-brand>
+            <b-navbar-brand href="/">Olivier Duplouy</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav>
-                    <b-nav-item href="#">Link</b-nav-item>
+                    <b-nav-item href="/skills">Compétences/Formations</b-nav-item>
+                    <b-nav-item href="/projects">Projets</b-nav-item>
                 </b-navbar-nav>
 
                 <!-- Right aligned nav items -->

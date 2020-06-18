@@ -18,8 +18,8 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'nuxt-property-decorator'
-import People from '../pages/model/people'
-import Experience from '../pages/model/experience'
+import People from './model/people'
+import Experience from './model/experience'
 
 @Component
 export default class Card extends Vue {
